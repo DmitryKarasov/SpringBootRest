@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 public class AuthorizationController {
-    AuthorizationService service;
+    private final AuthorizationService service;
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@Validated User user) {
